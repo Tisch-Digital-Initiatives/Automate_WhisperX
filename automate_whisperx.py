@@ -17,7 +17,7 @@ def run_whisperx(filename, indirectory, outdirectory):
 def process_files(indirectory, outdirectory):
     indirectory_contents = os.listdir(indirectory)
     for child in indirectory_contents:
-            run_whisperx(child, indirectory, outdirectory)
+        run_whisperx(child, indirectory, outdirectory)
 #loops through all the A/V files in the input directory
 
 
@@ -41,3 +41,4 @@ if __name__=="__main__":
     process_files(args.indirectory, args.outdirectory)
 #Runs script, requires input/output directories as arguments, checks to make sure directories actually exist
     
+
