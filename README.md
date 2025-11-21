@@ -1,7 +1,8 @@
 # Automate_WhisperX
-A wrapper for the WhisperX command line tool that can batch process multiple files in a directory. 
 
-It requires an input directory containing the A/V files to be processed and a separate output directory to move the files + generated transcripts to after processing. 
+A wrapper for the WhisperX command line tool that can batch process multiple files in a directory. WhisperX generates an srt file for each a/v file in the batch and the script collocates the a/v file with the srt in a new subdirectory. 
+
+This script takes two parameters: the input directory (required) containing the batch of files you want to process and the output directory (optional) if you want the new subdirectories to be created and srt files saved somewhere else. 
 
 To use automate_whisperx.py, run the script in the command line with the arguments -i [input directory] and -o [output directory].
 
