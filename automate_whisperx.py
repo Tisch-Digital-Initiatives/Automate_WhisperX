@@ -17,9 +17,9 @@ def run_whisperx(filename, indirectory, outdirectory):
     #allows for optional output directory, will create subdirectories in either in/out directory
     if str(os.name)=="posix":
         #checks posix or unix operating system -- require different command line syntax
-        subprocess.run([f"whisperx {filepath} --compute_type float32 --output_format srt --language en --output_dir {file_subdirectory}"], capture_output=True, shell=True)
+        subprocess.run([f"whisperx {filepath} --compute_type float32 --model large --output_format srt --language en --output_dir {file_subdirectory}"], capture_output=True, shell=True)
     else: 
-        subprocess.run(f"whisperx {filepath} --compute_type float32 --output_format srt --language en --output_dir {file_subdirectory}")
+        subprocess.run(f"whisperx {filepath} --compute_type float32 --model large --output_format srt --language en --output_dir {file_subdirectory}")
     shutil.move(filepath, file_subdirectory)
     #creates subdirectory for each a/v file, runs whisperx command w/ parameters, moves a/v file + srt to matching subdirectory
 
@@ -51,4 +51,5 @@ if __name__=="__main__":
     else: 
         print("please run this program with -i and -o arguments")
 #Runs script, requires input/output directories as arguments, checks to make sure directories actually exist
+
 
